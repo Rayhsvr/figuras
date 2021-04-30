@@ -4,6 +4,21 @@
     <meta charset="utf-8">
     <title>Areas</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+    // Calcula área de rectángulo
+    function calcularArea() {
+      const base = parseInt(document.getElementById('base').value)
+      const altura = parseInt(document.getElementById('altura').value)
+      console.log(base)
+      console.log(altura)
+      if (base > 0 && altura >0) {
+        const area= base * altura;
+        console.log(area)
+        document.getElementById('area').value = area
+      }
+    }
+
+    </script>
   </head>
   <body>
       <header>
@@ -13,22 +28,22 @@
         <!-- Menú de navegación -->
       </nav>
       <section>
-        <form action="#" method="get" name="formAreas" id="formAreas">
+        <form action="index.html" method="get" name="formAreas" id="formAreas">
         <div id="datos">
         <p><label for="base">Base:</label>
-          <input type="number" name="base" id="base" size="5" maxlength="3" placeholder="Base Rect.">
+          <input type="number" class="numero" name="base" id="base" size="5" maxlength="3" placeholder="Base Rect." onchange="calcularArea()">
         </p>
         <p><label for="altura">Altura:</label>
-          <input type="number" name="altura" id="altura" size="5" maxlength="3" placeholder="Altura Rect.">
+          <input type="number" class="numero" name="altura" id="altura" size="5" maxlength="3" placeholder="Altura Rect." onchange="calcularArea()">
         </p>
         </div>
         <div id="resultado">
         <p><label for="area">Resultado</label>
-          <input type="text" name="area" id="area" size="7">
+          <input type="text" class="numero" name="area" id="area" size="7">
         </p>
         </div>
         <div id="botones">
-          <input type="submit" name="enviar" id="enviar" value="Enviar">
+          <button onclick="calcularArea()">Calcular</button>
           <input type="reset" name="limpiar" id="limpiar" value="Limpiar">
         </div>
         </form>
