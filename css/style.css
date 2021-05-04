@@ -1,5 +1,7 @@
 body {width: 40%;}
 h1 {text-align: center;}
+div p {font-weight: bold;}
+footer p {font-style: italic; }
 
 #datos {background-color: #00ff00; text-align: center;}
 #resultado {background-color: #0000ff; color: #ffffff;text-align: center;}

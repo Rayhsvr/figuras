@@ -14,7 +14,7 @@
         <!-- Menú de navegación -->
       </nav>
       <section>
-        <form action="index.html" method="get" name="formAreas" id="formAreas">
+    <!--    <form action="index.html" method="get" name="formAreas" id="formAreas"> -->
         <div id="datos">
         <p><label for="base">Base:</label>
           <input type="number" class="numero" name="base" id="base" size="5" maxlength="3" placeholder="Base Rect." onchange="calcularArea()">
@@ -30,10 +30,12 @@
         </div>
         <div id="botones">
           <button onclick="calcularArea()">Calcular</button>
-          <input type="reset" name="limpiar" id="limpiar" value="Limpiar">
+          <input type="reset" name="limpiar" id="limpiar" value="Limpiar" onclick="limpiaValores()">
         </div>
-        </form>
+    <!--    </form> -->
       </section>
-      <footer></footer>
+      <footer>
+        <p>Derechos Reservados 2021</p>
+      </footer>
   </body>
 </html>
