@@ -17,15 +17,19 @@
     <!--    <form action="index.html" method="get" name="formAreas" id="formAreas"> -->
         <div id="datos">
         <p><label for="base">Base:</label>
-          <input type="number" class="numero" name="base" id="base" size="5" maxlength="3" placeholder="Base Rect." onchange="calcularArea()">
+          <input type="number" class="numero" name="base" id="base" size="5" maxlength="3" placeholder="Base Rect." onchange="calcularArea()" required>
         </p>
         <p><label for="altura">Altura:</label>
-          <input type="number" class="numero" name="altura" id="altura" size="5" maxlength="3" placeholder="Altura Rect." onchange="calcularArea()">
+          <input type="number" class="numero" name="altura" id="altura" size="5" maxlength="3" placeholder="Altura Rect." onchange="calcularArea()" required>
         </p>
+        <label><p>Tipo de Figura</p>
+          <p><input type="radio" name="tipo" id="tipo" value"R" checked onchange="calcularArea()">Rectángulo</p>
+          <p><input type="radio" name="tipo" id="tipo" value"T" onchange="calcularArea()">Triángulo</p>
+          </label>
         </div>
         <div id="resultado">
         <p><label for="area">Resultado</label>
-          <input type="text" class="numero" name="area" id="area" size="7">
+          <input type="text" class="numero" name="area" id="area" size="7" readonly>
         </p>
         </div>
         <div id="botones">
